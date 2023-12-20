@@ -1,0 +1,35 @@
+GET HTTP://localhost:8080/api/cliente
+
+###
+
+GET HTTP://localhost:8080/api/cliente/1
+
+###
+
+POST HTTP://localhost:8080/api/clientes
+Content-Type: application/json
+
+{
+    "nome": "Gabriel",
+    "idade": 19,
+    "email": "gablima004@gmail.com",
+    "cpf": "16836337765"
+}
+
+###
+
+PUT HTTP://localhost:8080/api/cliente/1
+Content-Type: application/json
+
+{
+    "nome": "Gabriel Lima",
+    "idade": 19,
+    "email": "gablima004@gmail.com",
+    "cpf": "16836337765"
+}
+
+###
+
+DELETE HTTP://localhost:8080/api/cliente/1
+    
+

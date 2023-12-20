@@ -1,0 +1,40 @@
+GET HTTP://localhost:8080/api/endereco
+
+###
+
+POST HTTP://localhost:8080/api/enderecos
+Content-Type: application/json
+
+{   
+    "cliente": {
+        "id": 1
+    },
+    "cep": "26900000",
+    "rua": "Rua 1",
+    "bairro": "Bairro 2",
+    "cidade": "Cidade 1",
+    "estado": "Estado 1",
+    "complemento": "Complemento 1",
+    "numero": 134
+}
+
+###
+
+PUT HTTP://localhost:8080/api/endereco/1
+Content-Type: application/json
+
+{
+    "cep": "26900000",
+    "rua": "Travessa Vereador José de Souza",
+    "bairro": "Recreio",
+    "cidade": "Miguel Pereira",
+    "estado": "Rio de Janeiro",
+    "coplemento": "Centro",
+    "numero": 134
+}
+
+###
+
+DELETE HTTP://localhost:8080/api/endereco/3
+    
+

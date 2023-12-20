@@ -1,0 +1,32 @@
+GET HTTP://localhost:8080/api/categorias
+
+###
+
+GET HTTP://localhost:8080/api/categorias/tecnologia
+
+###
+
+POST HTTP://localhost:8080/api/categorias
+Content-Type: application/json
+
+{
+    "nome": "Informática"
+}
+
+###
+
+PUT HTTP://localhost:8080/api/categorias/1
+Content-Type: application/json
+
+{
+    "nome": "Iphone 13",
+    "marca": "APPLE",
+    "preco": 350.0,
+    "descricao": "Produto 13"
+}
+
+###
+
+DELETE HTTP://localhost:8080/api/categoria/3
+    
+

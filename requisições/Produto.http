@@ -1,0 +1,43 @@
+GET HTTP://localhost:8080/api/produtos
+
+###
+
+GET HTTP://localhost:8080/api/produtos/categoria/Informática
+###
+
+GET HTTP://localhost:8080/api/produtos/1
+
+###
+
+POST HTTP://localhost:8080/api/produtos
+Content-Type: application/json
+
+{
+    "nome": "Iphone 23",
+    "marca": "APPLE",
+    "categoria": {
+        "id": 1
+    },
+    "preco": 650.0,
+    "descricao": "Produto 13"
+}
+
+###
+
+PUT HTTP://localhost:8080/api/produtos/1
+Content-Type: application/json
+
+{
+    "nome": "Iphone 18",
+    "marca": "APPLE",
+    "preco": 650.0,
+    "categoria": {
+        "id_categoria": 1},
+    "descricao": "Produto 13"
+}
+
+###
+
+DELETE HTTP://localhost:8080/api/produtos/3
+    
+
