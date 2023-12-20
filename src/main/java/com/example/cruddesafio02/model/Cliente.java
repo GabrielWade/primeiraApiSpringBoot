@@ -9,7 +9,6 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToMany;
 
 @Entity
@@ -19,9 +18,6 @@ public class Cliente {
     @Column(name = "id_cliente")
     private long id;
 
-    //Estou dizendo que a categoria tem muitos produtos
-        //(mappedBy = "categoria") está dizendo que a entidade ProdutoModel é a proprietária do relacionamento. Isso significa que qualquer alteração no relacionamento deve ser feita do lado ProdutoModel.
-        //Em outras palavra, aqui estou dizendo para tabela ProdutodoModel vai conhecer lá no banco 
     @OneToMany(mappedBy = "cliente")
     private List<Endereco> endereco;
 

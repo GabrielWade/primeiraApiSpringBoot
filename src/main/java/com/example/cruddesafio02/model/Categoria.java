@@ -18,9 +18,6 @@ public class Categoria {
     @Column(name = "id_cetegoria")
     private long id;
 
-    //Estou dizendo que a categoria tem muitos produtos
-        //(mappedBy = "categoria") está dizendo que a entidade ProdutoModel é a proprietária do relacionamento. Isso significa que qualquer alteração no relacionamento deve ser feita do lado ProdutoModel.
-        //Em outras palavra, aqui estou dizendo para tabela ProdutodoModel vai conhecer lá no banco 
     @OneToMany(mappedBy = "categoria")
     private List<ProdutoModel> produtos;
 

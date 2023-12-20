@@ -2,10 +2,6 @@ package com.example.cruddesafio02.model;
 
 
 
-import java.util.List;
-
-import org.hibernate.annotations.ManyToAny;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -13,7 +9,6 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
-import jakarta.persistence.OneToOne;
 
 @Entity
 public class Endereco {
@@ -22,9 +17,6 @@ public class Endereco {
     @Column(name = "id_endereco")
     private long id;
 
-    //Estou dizendo que a categoria tem muitos produtos
-        //(mappedBy = "categoria") está dizendo que a entidade ProdutoModel é a proprietária do relacionamento. Isso significa que qualquer alteração no relacionamento deve ser feita do lado ProdutoModel.
-        //Em outras palavra, aqui estou dizendo para tabela ProdutodoModel vai conhecer lá no banco 
     @ManyToOne
     @JoinColumn(name = "id_cliente")
     private Cliente cliente;

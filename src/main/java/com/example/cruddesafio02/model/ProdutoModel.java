@@ -10,7 +10,6 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import jakarta.persistence.Column;
-//import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "produto")
@@ -26,9 +25,7 @@ public class ProdutoModel {
     @Column(nullable = false)
     private MarcaProduto marca;
 
-    //aqui estou dizendo que muitas linhas da tabela produto vai ter uma linha da tabela categoria
     @ManyToOne
-    //aqui estou dizendo para JPA qual dessas colunas vai fazer um joi na tabela produto
     @JoinColumn(name = "id_categoria")
     private Categoria categoria;
 
