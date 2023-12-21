@@ -1,4 +1,4 @@
-GET HTTP://localhost:8080/api/endereco
+GET HTTP://localhost:8080/api/enderecos
 
 ###
 
@@ -11,7 +11,7 @@ Content-Type: application/json
     },
     "cep": "26900000",
     "rua": "Rua 1",
-    "bairro": "Bairro 2",
+    "bairro": "Bairro 1",
     "cidade": "Cidade 1",
     "estado": "Estado 1",
     "complemento": "Complemento 1",
@@ -20,7 +20,25 @@ Content-Type: application/json
 
 ###
 
-PUT HTTP://localhost:8080/api/endereco/1
+POST HTTP://localhost:8080/api/enderecos
+Content-Type: application/json
+
+{   
+    "cliente": {
+        "id": 2
+    },
+    "cep": "26911222",
+    "rua": "Rua 2",
+    "bairro": "Bairro 2",
+    "cidade": "Cidade 2",
+    "estado": "Estado 2",
+    "complemento": "Complemento 2",
+    "numero": 431
+}
+
+###
+
+PUT HTTP://localhost:8080/api/enderecos/1
 Content-Type: application/json
 
 {
@@ -35,6 +53,6 @@ Content-Type: application/json
 
 ###
 
-DELETE HTTP://localhost:8080/api/endereco/3
+DELETE HTTP://localhost:8080/api/enderecos/3
     
 

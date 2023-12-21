@@ -2,7 +2,7 @@ GET HTTP://localhost:8080/api/produtos
 
 ###
 
-GET HTTP://localhost:8080/api/produtos/categoria/Informática
+GET HTTP://localhost:8080/api/produtos/categoria/smatphone
 ###
 
 GET HTTP://localhost:8080/api/produtos/1
@@ -13,13 +13,28 @@ POST HTTP://localhost:8080/api/produtos
 Content-Type: application/json
 
 {
-    "nome": "Iphone 23",
+    "nome": "Iphone 12",
     "marca": "APPLE",
     "categoria": {
         "id": 1
     },
     "preco": 650.0,
-    "descricao": "Produto 13"
+    "descricao": "Produto 11"
+}
+
+###
+
+POST HTTP://localhost:8080/api/produtos
+Content-Type: application/json
+
+{
+    "nome": "TV SAMSUNG",
+    "marca": "SAMSUNG",
+    "categoria": {
+        "id": 2
+    },
+    "preco": 650.0,
+    "descricao": "TV 4K 55"
 }
 
 ###
@@ -28,16 +43,17 @@ PUT HTTP://localhost:8080/api/produtos/1
 Content-Type: application/json
 
 {
-    "nome": "Iphone 18",
+    "nome": "Iphone 12",
     "marca": "APPLE",
-    "preco": 650.0,
     "categoria": {
-        "id_categoria": 1},
-    "descricao": "Produto 13"
+        "id": 1
+    },
+    "preco": 750.0,
+    "descricao": "Produto 12"
 }
 
 ###
 
-DELETE HTTP://localhost:8080/api/produtos/3
+DELETE HTTP://localhost:8080/api/produtos/2
     
 

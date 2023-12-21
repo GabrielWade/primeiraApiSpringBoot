@@ -1,6 +1,7 @@
 package com.example.cruddesafio02.model;
 
 import com.example.cruddesafio02.model.Enum.MarcaProduto;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -27,6 +28,7 @@ public class ProdutoModel {
 
     @ManyToOne
     @JoinColumn(name = "id_categoria")
+    @JsonBackReference
     private Categoria categoria;
 
     private String descricao;
